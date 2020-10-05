@@ -5,6 +5,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
+    "test": "node_modules/.bin/jest test/**/*.spec.js",
     "eject": "expo eject"
   },
   "dependencies": {
@@ -16,7 +17,17 @@
     "react-native-web": "~0.13.12"
   },
   "devDependencies": {
-    "@babel/core": "~7.9.0"
+    "@babel/core": "~7.9.0",
+    "detox": "^17.8.1",
+    "detox-expo-helpers": "^0.6.0",
+    "expo-detox-hook": "^1.0.10",
+    "jest-circus": "^26.5.1",
+    "jest-expo": "^39.0.0",
+    "react-native-testing-library": "^6.0.0",
+    "react-test-renderer": "^16.13.1"
+  },
+  "jest": {
+    "preset": "jest-expo"
   },
   "private": true
 }
