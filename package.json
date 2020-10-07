@@ -5,15 +5,24 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "node_modules/.bin/jest test/**/*.spec.js",
-    "eject": "expo eject"
+    "test": "node_modules/.bin/jest test/**/*.spec.js --watch",
+    "eject": "expo eject",
+    "e2e": "detox test -l trace --configuration ios.sim"
   },
   "dependencies": {
+    "@react-native-community/masked-view": "0.1.10",
+    "axios": "^0.20.0",
     "expo": "~39.0.2",
+    "expo-location": "~9.0.0",
     "expo-status-bar": "~1.0.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz",
+    "react-native-gesture-handler": "~1.7.0",
+    "react-native-maps": "0.27.1",
+    "react-native-reanimated": "~1.13.0",
+    "react-native-safe-area-context": "3.1.4",
+    "react-native-screens": "~2.10.1",
     "react-native-web": "~0.13.12"
   },
   "devDependencies": {
@@ -28,6 +37,17 @@
   },
   "jest": {
     "preset": "jest-expo"
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim": {
+        "binaryPath": "bin/Exponent.app",
+        "type": "ios.simulator",
+        "name": "iPhone 11"
+      }
+    },
+    "test-runner": "jest",
+    "specs": ""
   },
   "private": true
 }

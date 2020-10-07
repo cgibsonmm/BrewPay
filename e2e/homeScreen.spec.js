@@ -1,3 +1,4 @@
+import { by, element, expect } from "detox";
 const { reloadApp } = require("detox-expo-helpers");
 
 describe("HomeScreen", () => {
@@ -6,6 +7,7 @@ describe("HomeScreen", () => {
   });
 
   it("should have the logo", async () => {
-    await element(by.id("main-logo")).toHaveText("BrewPay");
+    await expect(element(by.id("main-logo"))).toExist();
+    await expect(element(by.id("main-logo"))).toHaveText("BrewPay");
   });
 });
