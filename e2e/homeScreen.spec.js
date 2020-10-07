@@ -7,7 +7,6 @@ describe("HomeScreen", () => {
   });
 
   it("should have the logo", async () => {
-    await expect(element(by.id("main-logo"))).toExist();
-    await expect(element(by.id("main-logo"))).toHaveText("BrewPay");
+    await expect(element(by.text("BrewPay"))).toBeVisible();
   });
 });

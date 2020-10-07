@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
+    "@testing-library/jest-native": "^3.4.3",
     "detox": "^17.8.1",
     "detox-expo-helpers": "^0.6.0",
     "expo-detox-hook": "^1.0.10",
@@ -36,7 +37,10 @@
     "react-test-renderer": "^16.13.1"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
+    ]
   },
   "detox": {
     "configurations": {
