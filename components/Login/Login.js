@@ -11,6 +11,7 @@ import {
 } from "react-native";
 // import { View } from "react-native-safe-area-context";
 import LoginForm from "./LoginForm";
+// import AppleLogin from "./AppleLogin";
 import { Text } from "react-native-elements";
 
 import BackGroundImage from "../../assets/bar.jpg";
@@ -35,6 +36,7 @@ export default function Login() {
               </Text>
               <LoginForm handleSubmit={handleSubmit} />
               <Text>{res}</Text>
+              {/* <AppleLogin /> */}
             </View>
           </ImageBackground>
         </View>
