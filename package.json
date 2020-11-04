@@ -7,7 +7,7 @@
     "web": "expo start --web",
     "test": "node_modules/.bin/jest test/**/*.spec.js --watch",
     "eject": "expo eject",
-    "e2e": "detox test -l trace --configuration ios.sim"
+    "e2e": "detox test --configuration ios.sim"
   },
   "dependencies": {
     "@react-native-community/masked-view": "0.1.10",
